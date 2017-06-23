@@ -58,6 +58,16 @@ Theme - spacegray
 	"translate_tabs_to_spaces": true
 
 
+
+~/.bash_profile 
+	
+	eval $(/usr/libexec/path_helper -s)
+	export PS1="\[\033[36m\]PK\[\033[m\] \w\[\033[m\] \\$ "; clear
+	export CLICOLOR=1 export LSCOLORS=ExFxBxDxCxegedabagacad alias ls="ls -GFh"
+	export PATH="$HOME/.rbenv/bin:$PATH"
+	eval "$(rbenv init -)"
+	
+	
 ### Programs
 
 * Simplenote
