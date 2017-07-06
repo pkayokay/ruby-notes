@@ -44,6 +44,7 @@ Live-server nodes npm
   "tab_size": 2,  
   "translate_tabs_to_spaces": true  
 
+Boxy Theme
 
 Theme - spacegray
 
@@ -62,11 +63,13 @@ Theme - spacegray
 ~/.bash_profile 
 	
 	eval $(/usr/libexec/path_helper -s)
-	export PS1="\[\033[36m\]PK\[\033[m\] \w\[\033[m\] \\$ "; clear
+	export PS1="\[\033[36m\][PK]\[\033[m\] \w\[\033[m\] \[\033[32m\]\$git_branch\[\033[m\]\$git_dirty\[\033[m\] $ "; clear
 	export CLICOLOR=1 export LSCOLORS=ExFxBxDxCxegedabagacad alias ls="ls -GFh"
 	export PATH="$HOME/.rbenv/bin:$PATH"
 	eval "$(rbenv init -)"
-	
+
+	export GITAWAREPROMPT=~/.bash/git-aware-prompt
+	source "${GITAWAREPROMPT}/main.sh"
 	
 ### Programs
 
