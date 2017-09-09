@@ -17,67 +17,14 @@ Live-server nodes npm
 * Install by "brew install postgresql"
 * "gem install pg"
 
-### [Web Dev]
-1. Ruby and RoR version set (every new project will start with the new version)
-* Home-brew
-* [rbenv](https://github.com/rbenv/rbenv)
-* [rbenv update](https://github.com/rkh/rbenv-update)
-### Vagrant 
-* https://github.com/FirehoseProject/firehose-vagrant/blob/master/README.md
 
-
-## Sketch 
-* sketch dynamic button plug in
-## Sublime text 
-* Package control: Emmet and space gray theme(below)
-* Sass
-* Sass Build
-* jQuery
-* JavaScript Complete
-* CleanCSS
-* HTMLBeautify
-* Browser Refresh
-* Bracket guard
-* Bracket highlighter
-
-
-  "tab_size": 2,  
-  "translate_tabs_to_spaces": true  
-
-Boxy Theme
-
-Theme - spacegray
-
-	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
-	"font_size": 16,
-	"ignored_packages":
-	[
-		"Vintage"
-	],
-	"tab_size": 2,
-	"theme": "Spacegray Eighties.sublime-theme",
-	"translate_tabs_to_spaces": true
-
-
-
-~/.bash_profile 
+~/.bash_profile (terminal config and git branch/status)
 	
-	eval $(/usr/libexec/path_helper -s)
+	
 	export PS1="\[\033[36m\][PK]\[\033[m\] \w\[\033[m\] \[\033[32m\]\$git_branch\[\033[m\]\$git_dirty\[\033[m\]$ "; clear
 	export CLICOLOR=1 export LSCOLORS=ExFxBxDxCxegedabagacad alias ls="ls -GFh"
-	export PATH="$HOME/.rbenv/bin:$PATH"
-	eval "$(rbenv init -)"
+	
 
 	export GITAWAREPROMPT=~/.bash/git-aware-prompt
 	source "${GITAWAREPROMPT}/main.sh"
-	
-### Programs
-
-* Simplenote
-* Chrome
-* Sublime
-* PG Commander
-* Sketch
-* Microsoft Office
-
 
