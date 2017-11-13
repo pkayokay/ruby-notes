@@ -11,9 +11,21 @@
 
 def unique(integers)
   array =[]
-  integers.each{|i|
-    array << i unless array.include?(i)
-  }
+  integers.each{|i| array << i unless array.include?(i)}
+ 
+  # integers.each do |i|
+  #   unless array.include?(i)
+  #     array.push(i)
+  #   end
+  # end
+  #
+  
+  # integers.each do |i|
+  #   if !array.include?(i)
+  #     array << i
+  #   end
+  # end
+  
   array.to_a
 end
 
