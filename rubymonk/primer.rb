@@ -55,8 +55,36 @@ def add(*numbers)
   numbers.inject(0) { |sum, number| sum + number }
 end
 
+#
 def add_with_message(message, *numbers)
   "#{message} : #{add(*numbers)}"
 end
 
 puts add_with_message("The Sum is", 1, 2, 3)
+
+
+# Lambdas: funtion without a name, it's a piece of code we can store in a variable and is an object.
+# Block: a piece of code that can't be stored in a variable and is not an object. Faster than a lambda but not as versatile, and one of the rate instances where Ruby's everything is an object rule is broken :(
+
+l = lambda {'Do or do not'}
+# same as
+l = lambda do
+  'Do or do not'
+end
+
+end
+
+l.call
+
+l = lambda do |string|
+  if string == 'try'
+    return 'Hi'
+  else
+    return 'Yo'
+  end
+end
+
+l.call('try')
+
+
+
