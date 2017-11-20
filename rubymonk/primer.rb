@@ -29,7 +29,7 @@ delete_if
 
 1.is_a?(Integer) # true
 1.is_a?(Class) # false
-1.method("next") #<Method: Integer#next>
+1.method("next") #<Method: Integer#next> gives us the instance of the method, so we can call later.
 1.method("even?") #<Method: Integer#even?>
 
 next_method_object = 1.method("next")
@@ -85,6 +85,83 @@ l = lambda do |string|
 end
 
 l.call('try')
+
+
+# Modules: allow to create groups of methods that can be included and mixed into a number of classes, only hold behavior, unlike classes, which hold both behavior and state.
+
+# Since these modules cannot be initialized, there's no way to call these methods directly so we include them in another class, which makes them available for the instances of that class
+# we can use "include"
+
+module WarmUp
+  def push_ups
+    "Phew, I need a break!"
+  end
+end
+
+class Gym
+  include WarmUp
+
+  def preacher_curls
+    "I'm building my biceps."
+  end
+end
+
+class Dojo
+  include WarmUp
+
+  def tai_kyo_kyu
+    "Look at my stance!"
+  end
+end
+
+puts Gym.new.push_ups
+puts Dojo.new.push_ups
+
+#
+
+module Perimeter
+  def perimeter
+    sides.inject(0) { |sum, side| sum + side }
+  end
+end
+
+class Rectangle
+  # Your code here
+  include Perimeter
+
+  def initialize(length, breadth)
+    @length = length
+    @breadth = breadth
+  end
+
+  def sides
+    [@length, @breadth, @length, @breadth]
+  end
+end
+
+class Square
+  # Your code here
+  include Perimeter
+
+  def initialize(side)
+    @side = side
+  end
+
+  def sides
+    [@side, @side, @side, @side]
+  end
+end
+
+
+# Default Hash Value
+normal = Hash.new
+was_not_there = normal[:whatever_value]
+puts was_not_there # nil
+
+usually_brown = Hash.new("brown")
+pretending_to_be_there = usually_brown[:whatever_value]
+puts pretending_to_be_there # "brown" (the default value)
+
 
 
 
