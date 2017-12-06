@@ -2,10 +2,7 @@
 ## Ruby and RoR
 ### Regular Terminal
 1. Homebrew
-2. RVM(on regular terminal)
-http://stjhimy.com/posts/10-five-quick-steps-to-set-up-rvm-with-rails-2-and-rails3
-https://rvm.io/gemsets/listing 
-3. Use gem sets. Each gem set allows the create of different sets, ex. You can use ruby v 2.0.0 with rails 5.0.0 on a gem set called set1. You can also create other pairs and switch between gem set.
+2. Rbenv
 
 ### Refer to this with permission issues
 https://stackoverflow.com/questions/34227854/error-while-executing-gem-errnoeacces-permission-denied-rb-sysopen
