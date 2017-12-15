@@ -10,15 +10,8 @@
 * http://postgresapp.com/
 * https://eggerapps.at/postico/
 
-### Github branches: 
-* `develop`
-* `master`
 
-### Heroku
-* `dev`
-* `prod`
-
-## Heroku Environments
+## Environments
 * https://devcenter.heroku.com/articles/multiple-environments
 
 	heroku create app-dev --remote dev
@@ -28,7 +21,14 @@
 	git push [environment] [branch you want to push]
 	git push dev develop:master
 	git push prod master:master
-	
+
+### Github branches: 
+* `develop`
+* `master`
+
+### Heroku
+* `dev`
+* `prod`
 
 ## Bash Profile
 
