@@ -2,7 +2,12 @@
 
 ## Adding Custom Domain to Project Page (Static Sites)
 
-* Add to DNS Settings on domain manager
+Add to DNS Settings on domain manager, same settings for all pages.
+
+Create and use `gh-pages` branch to redirect pkayokay.github.io/mypage to new domain 
+
+## Settings on NAMECHEAP
+
 * CNAME Record:   Host = www     Value  =  username.github.io
 * URL Redirect Record Host = @  Value = http://websiteurl.com 
 * Add redirect domain from websiteurl.com -> http://www.websiteurl.com
