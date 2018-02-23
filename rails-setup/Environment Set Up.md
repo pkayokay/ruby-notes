@@ -35,14 +35,19 @@
 
 ~/.bash_profile (terminal config and git branch/status)
 	
+	# Terminal Name
 	PS1='\[\033[36m\]\u\[\033[m\] \w\[\033[0;32m\]$( git branch 2> /dev/null | cut -f2 -d\* -s | sed "s/^ / [/" | sed "s/$/]/" )\[\033[0m\] \$ '
-
-	# Tell grep to highlight matches
-	export GREP_OPTIONS='--color=auto'
-
-	# Tell ls to be colourful
+	# Terminal Color
 	export CLICOLOR=1
 	export LSCOLORS=Exfxcxdxbxegedabagacad
+
+	# VS Code
+	code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+	# brew install wget will install subl
+
+	# RVM purposes
+	source ~/.profile
+	source /Users/paulkim/.rvm/scripts/rvm
 
 	
 
