@@ -1,7 +1,7 @@
 # Environment Set Up
 
 1. Homebrew
-2. Rbenv
+2. RVM
 3. Postgresql - `gem install pg`
 4. `rails new app-name --database=postgresql` 
 
@@ -43,8 +43,7 @@
 	# Tell ls to be colourful
 	export CLICOLOR=1
 	export LSCOLORS=Exfxcxdxbxegedabagacad
-	export PATH="$HOME/.rbenv/bin:$PATH"
-	eval "$(rbenv init -)"
+
 	
 
 
