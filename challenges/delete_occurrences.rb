@@ -4,3 +4,7 @@ def delete_nth(order, max_e)
 end
 
 puts delete_nth([1,1,1,1], 2) # return [1,1]
+
+a = Hash.new
+a['cool'] = 'd'
+puts a
