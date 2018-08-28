@@ -4,7 +4,7 @@ You're likely to find lots and lots of arrays in Ruby programs, there will also 
 
 ### Literal Shortcuts
 
-```
+```ruby
 ## Arrays
 poem_words = ['twinkle','little','star','how','I','wonder']
 poem_words = %w{ twinkly little star how I wonder }
@@ -19,3 +19,31 @@ book_info = {:first_name => 'Russ', :last_name => 'Olsen'}
 book_info = {first_name: 'Russ', last_name: 'Olsen}
 
 ```
+
+
+### Instant Arrays and Hashes from Method Calls
+
+```ruby
+def load_font(name, size = 12)
+end
+
+load_font('Paul') # default size of 12 if second argument not passed
+
+# this method will take a completely arbitrary set of arguments
+def echo_all(*args)
+  args.each { |arg| puts arg }
+end
+
+# The two methods below both take authors
+# this one takes an array of authors.
+def add_authors(names)
+    @author += " #{names.join(' ')}"
+end
+
+# This one authors with separated commas
+def add_authors(*names)
+    @author += " #{names.join(' ')}"
+end
+```
+
+### 
