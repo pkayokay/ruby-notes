@@ -1,6 +1,4 @@
-# Chapter 1
-
-### Basics:
+# Chapter 1 - Basics
 
 - **Explicit Code:** good code tells the reader exactly what it is trying to do.
 - **Consice:** there's a limit to how much information you can keep in your head, keep it short and sweet.
