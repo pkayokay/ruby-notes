@@ -37,13 +37,44 @@ end
 # The two methods below both take authors
 # this one takes an array of authors.
 def add_authors(names)
-    @author += " #{names.join(' ')}"
+    @author += "#{names.join(' ')}"
 end
 
 # This one authors with separated commas
 def add_authors(*names)
-    @author += " #{names.join(' ')}"
+    @author += "#{names.join(' ')}"
 end
 ```
 
-### 
+### Run through collections
+
+```ruby
+movie = { title: '2001', genre: 'sci fi'}
+movie.each { |entry, c| puts "#{entry} => #{c}"}
+```
+
+### Which methods actually change a collection?
+
+```ruby
+a = [1,2,3]
+a.reverse
+
+a.reverse!
+```
+
+### Staying out of trouble
+
+```ruby
+array = [0,-10,-9,5,9]
+array.each_index {|i| array.delete_at(i) if array[i] < 0}
+puts array
+
+# This code will leave out some negative numbers because because on the loop, it will index each consecutively, but the indexes of the values will shift if a number is delete if < 0, in this case [0,-9,5,9]. -9 is skipped because of the index position shifted.
+
+
+array = []
+array[24601] = "Hello World"
+
+# also take a note when adding elements well past the end of an existing array. In this example, 24602 elements of the array have been created (nil)...
+
+```
