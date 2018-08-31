@@ -30,3 +30,16 @@ EOF
 - 'yes yes'.gsub('yes','no') (multiple substitutions)
 - `split` will split strings on its whitespace, if passed an argument such as ':', it will split it on colons.
 - "Hello World".index("World") returns 6 where the word begins
+
+
+### Character and Byes
+
+```ruby
+# you can think of strings as a collection of characters
+"Paul".each_char {|c| puts c}
+
+# or as a collection of bytes, behind abstractions everything is a byte.
+"Paul".each_byte {|b| puts b}
+
+# Ruby's string class omits the plain each method because it asks, a "collection of what"? could be any of the above.
+```
