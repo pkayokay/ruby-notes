@@ -18,3 +18,15 @@ EOF
 # for very long multiline strings
 
 ```
+
+### Some methods...
+- `.lstrip` returns with leading whitespaces clipped off.
+- `.rstrip` returns with whitespace off of the end.
+- `.strip` returns with leading and end whitespaces off.
+- `.chomp` return copy of the string with at most one newline character. Knocks off one new line.
+- `.chop` returns the string without the last character.
+- `upcase`, `downcase`, `swapcase`, `capitalize`
+- 'It is warm outside'.sub('warm','cold') (one substitution)
+- 'yes yes'.gsub('yes','no') (multiple substitutions)
+- `split` will split strings on its whitespace, if passed an argument such as ':', it will split it on colons.
+- "Hello World".index("World") returns 6 where the word begins
