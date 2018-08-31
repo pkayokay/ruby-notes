@@ -43,3 +43,12 @@ EOF
 
 # Ruby's string class omits the plain each method because it asks, a "collection of what"? could be any of the above.
 ```
+
+
+### Side note on Rails and RegExp
+
+- Rails uses the `inflection` facility to figure out that the class container within `current_employee.rb` shoudl be `CurrentEmployee` and the database table associated with `CurrentEmployee` is `current_employees`.
+- The easiest inflection ruels to understand are the ones that handle the irregular cases.
+  - `inflect.irregular('person','people')
+  - `inflect.irregular('man','men')
+- Rails just applies those rules with a `gsub` call.
