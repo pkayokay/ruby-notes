@@ -52,3 +52,21 @@ EOF
   - `inflect.irregular('person','people')
   - `inflect.irregular('man','men')
 - Rails just applies those rules with a `gsub` call.
+
+
+### Ruby Strings are mutable
+
+```ruby
+first_name = 'Paul'
+first_name[0] = 'S'
+
+# do this (more readable)
+first_name = first_name.upcase
+#instead of
+first_name.upcase!
+
+
+first_name[-1] # returns l
+first_name[0..1] # returns 'Pa'
+
+```
