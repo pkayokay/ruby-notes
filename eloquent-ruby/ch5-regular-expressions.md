@@ -36,3 +36,23 @@ To sum it up.
 `\d\d:\d\d (AM|PM)` is a regular expression used to find time.
 
 "Any string that starts with two digits, followed by a colon, followed by two more digits, followed by a space, then by either AM or PM"
+
+
+### The Regular Expression Start
+
+- `*` wil match zero or more of the thing that just came before it.
+- `AB*` will match AB
+- `AB*` will also match ABB as well as ABBBBBBB - it's matching A followed by any number of B's (zero or more of the thing that just came before it)
+- `AB*` will also match plain old A, in this case there are zero of the thing that came before it.
+- `[aeiou]*` will match any number of vowels.
+- `[0-9]* will match any number of digits.
+
+
+### One of the most widely used of all regular expressions
+
+- `.*` will match any number of characters, anything because `.` tells it to match one single character while `*` tells it to match with zero or more, so in a sense it's the same as `.` and `..` and `...` and so on.
+- Some common uses cases
+  - `George.*` will match the full name of anythign with the first name George.
+  - `.*George` will match the name of anyone with the last name George.
+  - `.*George.*` will match both anyone who has George in his name somewhere.
+
