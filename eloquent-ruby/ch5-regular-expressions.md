@@ -72,3 +72,29 @@ To sum it up.
   puts "It's morning!" if /aM/i =~ the_time
   # turn case sensitivity off by adding "i"
 ```
+
+
+### Beginning and Endings
+
+- `/\AOnce upon a time/` will match a string only if it begins with it.
+- `/and they all lived happily ever after\z/` will match the end of a string.
+- The two cases above will only work if if it actually began and ended with these sentences.
+- We need to use `^` the circumflex, it matches the beginning of the stringof the beginning of any line within the string.
+- `$` for the ending.
+
+```ruby
+
+content = 'The Princess And The Monkey
+
+Once upon a time there was a princess...
+...and they all lived happily ever after.
+
+The End'
+
+puts "Found it" if content =~ /^Once upon a time/
+puts "Found it" if content =~ /happily ever after\.$/
+puts "Found all" if content =~ /^Once upon a time.*happily ever after\.$/m
+
+
+```
+
