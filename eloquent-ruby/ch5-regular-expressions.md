@@ -24,3 +24,15 @@
     - `\d`, so `\d\d` will match any two digit number from 00 to 99.
     - `\w` (word character), will match any letter number or the underscore.
     - `\s` will match any whitespace character: vanilla spaces, tabs, newlines.
+- Aternatives separate different parts of your expression
+  - `A|B` will match either A or B
+  - `AM|PM`will match either AM or PM
+  - `A\.M\.|AM|P\.M\.|PM` will match A.M. or AM or P.M. or PM
+  - Also use () to set aside alternatives:
+    - `The (car|boat) is red` will match `The car is red` as well as `The boat is red`
+
+To sum it up.
+
+`\d\d:\d\d (AM|PM)` is a regular expression used to find time.
+
+"Any string that starts with two digits, followed by a colon, followed by two more digits, followed by a space, then by either AM or PM"
