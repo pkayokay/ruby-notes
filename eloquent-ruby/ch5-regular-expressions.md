@@ -56,3 +56,19 @@ To sum it up.
   - `.*George` will match the name of anyone with the last name George.
   - `.*George.*` will match both anyone who has George in his name somewhere.
 
+
+### Regular Expressions in Ruby
+
+- Forward slashes. ex. `/\d\d:\d\d (AM|PM)/`
+
+```ruby
+
+  puts /\d\d:\d\d (AM|PM)/ =~ '10:30 PM' # 0 because it found a match start at 0
+  puts /PM/ =~ '10:24 PM' # 6
+
+  # returns nil if nothing is found!
+
+  the_time = '10:12 Am'
+  puts "It's morning!" if /aM/i =~ the_time
+  # turn case sensitivity off by adding "i"
+```
