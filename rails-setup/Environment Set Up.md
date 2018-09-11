@@ -14,13 +14,14 @@
 ## Environments
 * https://devcenter.heroku.com/articles/multiple-environments
 
-		heroku create app-dev --remote dev
-		heroku create app-prod --remote prod
+		heroku create app-dev --remote staging
+		heroku create app-prod --remote production
 		heroku run rails db:migrate —app app-prod
 
-		git push [environment] [branch you want to push]
-		git push dev develop:master
-		git push prod master:master
+		# Heroku push
+		git push [environment] master:[branch]
+		git push staging master:develop
+		git push production master:master
 
 
 ### Github branches: 
@@ -28,14 +29,13 @@
 * `master`
 
 ### Heroku
-* `dev`
-* `prod`
+* `staging`
+* `production`
 
 ## Bash Profile
 
-~/.bash_profile (terminal config and git branch/status)
-	
-	# Terminal Name
+	~/.bash_profile (terminal config and git branch/status)
+
 	PS1='\[\033[36m\]\u\[\033[m\] \w\[\033[0;32m\]$( git branch 2> /dev/null | cut -f2 -d\* -s | sed "s/^ / [/" | sed "s/$/]/" )\[\033[0m\] \$ '
 	# Terminal Color
 	export CLICOLOR=1
@@ -47,8 +47,25 @@
 
 	# RVM purposes
 	source ~/.profile
-	source /Users/paulkim/.rvm/scripts/rvm
 
+	# Jekyll
+	# alias b="jekyll build"
+	# alias s="jekyll serve --watch"
+
+	# Ngrok
+	alias sharehost=".././ngrok http"
+
+	# Git
+	alias gc="git add . && git commit -am"
+	alias gpm="git push origin master"
+	alias greset="git reset --hard"
+	alias gclean="git clean -f -d"
+	alias bash="subl ~/.bash_profile"
+	alias rs="rails server"
+	alias rt="rails test"
+	alias r="rails"
+
+	[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 	
 
 
