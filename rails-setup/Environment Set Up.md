@@ -2,8 +2,8 @@
 
 1. Homebrew
 2. RVM
-3. Postgresql - `gem install pg`
-4. `rails new app-name --database=postgresql` 
+3. Postgresql - for `production`
+4. `bundle install --without production`
 
 
 ## Postgresql
