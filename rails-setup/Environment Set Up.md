@@ -27,10 +27,8 @@
 		heroku run rails db:migrate —app [name-of-prod-app]
 
 		# Heroku push
-		# Pushing to the environment to the main "master" branch : which branch.
-		git push [environment] master:[branch]
-		git push staging master:develop
-		git push production master:master
+		git push staging develop
+		git push production master
 		
 
 ### Github branches: 
