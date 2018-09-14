@@ -14,12 +14,20 @@
 ## Environments
 * https://devcenter.heroku.com/articles/multiple-environments
 
+		# Git push
+		git push origin master
+		git push origin develop
+		
+		# Create Heroku app
 		heroku create [name-of-dev-app] --remote staging
 		heroku create [name-of-prod-app] --remote production
+
+		# Migrations
 		heroku run rails db:migrate —app [name-of-dev-app]
 		heroku run rails db:migrate —app [name-of-prod-app]
 
 		# Heroku push
+		# Pushing to the environment to the main "master" branch : which branch.
 		git push [environment] master:[branch]
 		git push staging master:develop
 		git push production master:master
