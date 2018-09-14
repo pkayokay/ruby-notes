@@ -15,8 +15,8 @@
 * https://devcenter.heroku.com/articles/multiple-environments
 
 		# Git push
-		git push origin master
 		git push origin develop
+		git push origin master
 		
 		# Create Heroku app
 		heroku create [name-of-dev-app] --remote staging
